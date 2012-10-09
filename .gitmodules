@@ -1,0 +1,12 @@
+[submodule "lisp/use-package"]
+	path = lisp/use-package
+	url = https://github.com/jwiegley/use-package.git
+[submodule "lisp/initsplit"]
+	path = lisp/initsplit
+	url = https://github.com/dabrahams/initsplit.git
+[submodule "override/gnus"]
+	path = override/gnus
+	url = http://git.gnus.org/gnus.git
+[submodule "override/org-mode"]
+	path = override/org-mode
+	url = http://orgmode.org/org-mode.git
