@@ -26,4 +26,4 @@
  '(smtpmail-smtp-service 587)
  '(smtpmail-smtp-user "mminutoli@gmail.com")
  '(smtpmail-stream-type
-   (quote ssl)))
+   (quote starttls)))
