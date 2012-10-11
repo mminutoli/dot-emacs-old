@@ -14,6 +14,9 @@
 ;;; Packages configuration
 (load (expand-file-name "settings" user-emacs-directory))
 
+;;; Enable disabled command
+(put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
+
 ;;; Start of per package configuration
 
 ;;; gnus
@@ -29,10 +32,6 @@
 (use-package dot-org
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-smart-capture)))
-
-;;; whitespace-mode
-(use-package whitespace
-  :init (add-hook 'prog-mode-hook 'whitespace-mode))
 
 ;;; End of the configuration process.
 (when window-system

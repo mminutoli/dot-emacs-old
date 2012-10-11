@@ -27,4 +27,4 @@
  ;; If there is more than one, they won't work right.
  '(cursor
    ((t
-     (:background "yellow")))))
+     (:background "black")))))
