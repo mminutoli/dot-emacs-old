@@ -31,7 +31,7 @@
 ;;; org-mode
 (use-package dot-org
   :bind (("C-c a" . org-agenda)
-         ("C-c c" . org-smart-capture)))
+         ("C-c c" . org-capture)))
 
 ;;; End of the configuration process.
 (when window-system

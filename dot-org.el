@@ -4,7 +4,7 @@
 
 (require 'org)
 (require 'org-agenda)
-(require 'org-smart-capture)
+(require 'org-capture)
 
 
 (provide 'dot-org)
