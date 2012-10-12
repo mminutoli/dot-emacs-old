@@ -12,7 +12,7 @@
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
    (quote
-    (("\\`\\(org-\\)" "gnus-settings.el" nil nil)
+    (("\\`\\(org-\\)" "org-settings.el" nil nil)
      ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(scroll-bar-mode nil)

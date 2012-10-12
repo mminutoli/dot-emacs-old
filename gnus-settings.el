@@ -24,10 +24,6 @@
     (nnimap "imap.gmail.com"
             (nnimap-server-port 993)
             (nnimap-stream ssl))))
- '(org-agenda-files
-   (quote
-    ("home.org" "university.org")))
- '(org-default-notes-file "~/org/notes.org")
  '(send-mail-function
    (quote smtpmail-send-it))
  '(smtpmail-default-smtp-server "smtp.gmai.com")
