@@ -10,3 +10,6 @@
 [submodule "override/org-mode"]
 	path = override/org-mode
 	url = http://orgmode.org/org-mode.git
+[submodule "site-lisp/org2blog"]
+	path = site-lisp/org2blog
+	url = https://github.com/punchagan/org2blog.git

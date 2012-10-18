@@ -34,6 +34,9 @@
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
 
+;;; org2blog
+(use-package org2blog-autoloads)
+
 ;;; End of the configuration process.
 (when window-system
   (let ((elapsed (float-time (time-subtract (current-time)
