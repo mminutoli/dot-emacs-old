@@ -16,6 +16,7 @@
 
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
+(put 'upcase-region 'disabled nil)
 
 ;;; Start of per package configuration
 
