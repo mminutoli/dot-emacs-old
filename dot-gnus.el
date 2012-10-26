@@ -7,5 +7,7 @@
 (require 'starttls)
 (require 'message)
 
+;; Start the gnus-demon
+(gnus-demon-init)
 
 (provide 'dot-gnus)

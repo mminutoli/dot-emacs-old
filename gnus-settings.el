@@ -8,7 +8,8 @@
     (gnus-display-time-event-handler gnus-notifications)))
  '(gnus-demon-handlers
    (quote
-    ((gnus-demon-scan-news 5 5))))
+    ((gnus-demon-scan-news 3 2))))
+ '(gnus-demon-timestep 60)
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
