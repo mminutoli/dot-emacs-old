@@ -8,6 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(custom-file "~/.emacs.d/settings.el")
+ '(eshell-directory-name "~/.emacs.d/data/eshell/")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
