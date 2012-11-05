@@ -18,6 +18,9 @@
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
 (put 'upcase-region 'disabled nil)
 
+;;; Key bindings
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 ;;; Start of per package configuration
 
 ;;; gnus
