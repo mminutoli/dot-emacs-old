@@ -6,6 +6,9 @@
  '(gnus-after-getting-new-news-hook
    (quote
     (gnus-display-time-event-handler gnus-notifications)))
+ '(gnus-buttonized-mime-types
+   (quote
+    ("multipart/alternative" "multipart/encrypted" "multipart/signed")))
  '(gnus-demon-handlers
    (quote
     ((gnus-demon-scan-news 3 2))))
@@ -15,6 +18,7 @@
     (gnus-topic-mode gnus-agent-mode)))
  '(gnus-init-file "~/.emacs.d/dot-gnus.el")
  '(gnus-message-archive-group nil)
+ '(gnus-message-replysign t)
  '(gnus-notifications-use-google-contacts nil)
  '(gnus-notifications-use-gravatar nil)
  '(gnus-secondary-select-methods
@@ -25,6 +29,13 @@
     (nnimap "imap.gmail.com"
             (nnimap-server-port 993)
             (nnimap-stream ssl))))
+ '(gnus-treat-x-pgp-sig t)
+ '(message-setup-hook
+   (quote
+    (mml-secure-message-sign-pgpmime)))
+ '(mm-verify-option
+   (quote always))
+ '(mml2015-sign-with-sender t)
  '(send-mail-function
    (quote smtpmail-send-it))
  '(smtpmail-default-smtp-server "smtp.gmai.com")

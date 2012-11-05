@@ -13,7 +13,7 @@
  '(initsplit-customizations-alist
    (quote
     (("\\`\\(org-\\)" "org-settings.el" nil nil)
-     ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
+     ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(org2blog/wp-blog-alist
    (quote
