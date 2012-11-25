@@ -8,6 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(custom-file "~/.emacs.d/settings.el")
+ '(ede-project-directories nil)
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -20,7 +21,9 @@
    (quote
     (("bithatbite" :url "http://bithatbite.wordpress.com/xmlrpc.php" :username "nvmind"))))
  '(scroll-bar-mode nil)
+ '(semanticdb-default-save-directory "~/.emacs.d/data/semanticdb")
  '(show-paren-mode t)
+ '(srecode-map-save-file "~/.emacs.d/data/srecode-map.el")
  '(tool-bar-mode nil)
  '(transient-mark-mode nil)
  '(user-mail-address "mminutoli@gmail.com"))

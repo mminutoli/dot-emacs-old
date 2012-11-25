@@ -13,6 +13,8 @@
    (quote
     ((gnus-demon-scan-news 3 2))))
  '(gnus-demon-timestep 60)
+ '(gnus-group-change-level-function
+   (quote gnus-topic-change-level))
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
@@ -29,6 +31,9 @@
     (nnimap "imap.gmail.com"
             (nnimap-server-port 993)
             (nnimap-stream ssl))))
+ '(gnus-summary-line-format "%U%R%z%I%(%[%-23,23f%]%) %s
+")
+ '(gnus-thread-indent-level 2)
  '(gnus-treat-x-pgp-sig t)
  '(message-setup-hook
    (quote

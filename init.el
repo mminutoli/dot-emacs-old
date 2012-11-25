@@ -22,6 +22,34 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; Start of per package configuration
+(use-package ede
+  :init
+  (progn
+    (global-ede-mode t)
+    (use-package projects)))
+
+
+(use-package cc-mode
+  :defer t
+  :config (progn
+          (use-package cedet
+            :init
+            (progn
+              ;; Add further minor-modes to be enabled by
+              ;; semantic-mode.  See doc-string of
+              ;; `semantic-default-submodes' for other things you can
+              ;; use here.
+              (dolist
+                  (submode
+                   '(global-semantic-idle-scheduler-mode
+                     global-semantic-idle-summary-mode
+                     global-semantic-idle-completions-mode
+
+                     global-semantic-mru-bookmark-mode
+                     ))
+                (add-to-list 'semantic-default-submodes submode t))
+              ;; Enable Semantic
+              (semantic-mode 1)))))
 
 ;;; gnus
 (use-package dot-gnus
