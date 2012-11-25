@@ -49,7 +49,13 @@
                      ))
                 (add-to-list 'semantic-default-submodes submode t))
               ;; Enable Semantic
-              (semantic-mode 1)))))
+              (semantic-mode 1)))
+          (use-package google-c-style
+            :init (progn
+                    (add-hook 'c-mode-common-hook 'google-set-c-style)
+                    (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+                    ))
+          ))
 
 ;;; gnus
 (use-package dot-gnus
