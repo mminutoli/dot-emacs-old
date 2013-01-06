@@ -22,13 +22,13 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; Start of per package configuration
+;; ede-mode
 (use-package ede
-  :init
-  (progn
-    (global-ede-mode t)
-    (use-package projects)))
+  :defer t
+  :commands (ede-minor-mode ede-cpp-root-project)
+  )
 
-
+;; cc-mode
 (use-package cc-mode
   :defer t
   :config (progn
@@ -50,6 +50,10 @@
                 (add-to-list 'semantic-default-submodes submode t))
               ;; Enable Semantic
               (semantic-mode 1)))
+
+          (ede-minor-mode)
+          (use-package projects)
+
           (use-package google-c-style
             :init (progn
                     (add-hook 'c-mode-common-hook 'google-set-c-style)
