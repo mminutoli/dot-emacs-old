@@ -9,6 +9,7 @@
  '(column-number-mode t)
  '(custom-file "~/.emacs.d/settings.el")
  '(ede-project-directories nil)
+ '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -17,6 +18,7 @@
     (("\\`\\(org-\\)" "org-settings.el" nil nil)
      ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
+ '(menu-bar-mode nil)
  '(org2blog/wp-blog-alist
    (quote
     (("bithatbite" :url "http://bithatbite.wordpress.com/xmlrpc.php" :username "nvmind"))))
