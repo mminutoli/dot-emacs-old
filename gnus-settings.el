@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(gnus-after-getting-new-news-hook
    (quote
-    (gnus-display-time-event-handler gnus-notifications)))
+    (gnus-display-time-event-handler)))
  '(gnus-buttonized-mime-types
    (quote
     ("multipart/alternative" "multipart/encrypted" "multipart/signed")))
@@ -21,6 +21,9 @@
  '(gnus-init-file "~/.emacs.d/dot-gnus.el")
  '(gnus-message-archive-group nil)
  '(gnus-message-replysign t)
+ '(gnus-message-setup-hook
+   (quote
+    (mml-secure-message-sign-pgpmime)))
  '(gnus-notifications-use-google-contacts nil)
  '(gnus-notifications-use-gravatar nil)
  '(gnus-secondary-select-methods
@@ -35,9 +38,7 @@
 ")
  '(gnus-thread-indent-level 2)
  '(gnus-treat-x-pgp-sig t)
- '(message-setup-hook
-   (quote
-    (mml-secure-message-sign-pgpmime)))
+ '(message-setup-hook nil)
  '(mm-verify-option
    (quote always))
  '(mml2015-sign-with-sender t)
