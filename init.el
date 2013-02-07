@@ -28,6 +28,9 @@
   :commands (ede-minor-mode ede-cpp-root-project)
   )
 
+;; egg
+(use-package egg)
+
 ;; cc-mode
 (use-package cc-mode
   :defer t
