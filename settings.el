@@ -29,7 +29,10 @@
  '(tool-bar-mode nil)
  '(tramp-persistency-file-name "/home/mminutoli/.emacs.d/data/tramp")
  '(transient-mark-mode nil)
- '(user-mail-address "mminutoli@gmail.com"))
+ '(user-mail-address "mminutoli@gmail.com")
+ '(vc-handled-backends
+   (quote
+    (RCS CVS SVN SCCS Bzr Hg Mtn Arch))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
