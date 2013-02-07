@@ -27,6 +27,7 @@
  '(show-paren-mode t)
  '(srecode-map-save-file "~/.emacs.d/data/srecode-map.el")
  '(tool-bar-mode nil)
+ '(tramp-persistency-file-name "/home/mminutoli/.emacs.d/data/tramp")
  '(transient-mark-mode nil)
  '(user-mail-address "mminutoli@gmail.com"))
 (custom-set-faces
