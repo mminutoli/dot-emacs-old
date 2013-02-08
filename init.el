@@ -70,6 +70,10 @@
 (eval-after-load 'cus-edit
   (use-package initsplit))
 
+;;; magit
+(use-package magit
+  :bind ("C-x g" . magit-status))
+
 ;;; org-mode
 (use-package dot-org
   :bind (("C-c a" . org-agenda)
