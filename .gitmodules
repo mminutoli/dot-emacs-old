@@ -13,3 +13,6 @@
 [submodule "site-lisp/org2blog"]
 	path = site-lisp/org2blog
 	url = https://github.com/punchagan/org2blog.git
+[submodule "site-lisp/magit"]
+	path = site-lisp/magit
+	url = https://github.com/magit/magit.git
