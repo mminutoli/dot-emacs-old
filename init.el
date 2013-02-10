@@ -30,14 +30,15 @@
 
 ;; yasnippet
 (use-package yasnippet
-  :defer t
-  :commands (yas-minor-mode)
+  :commands (yas/minor-mode yas/expand)
+  :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
   :init
   (add-hook 'prog-mode-hook
             '(lambda ()
-               (yas-minor-mode)
-               (whitespace-mode)))
-  :config (yas-reload-all)
+               (yas/minor-mode 1)))
+  :config
+  (progn
+    (yas/reload-all))
   )
 
 ;; cc-mode
