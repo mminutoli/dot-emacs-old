@@ -95,6 +95,15 @@
 ;;; org2blog
 (use-package org2blog-autoloads)
 
+;;; whitespace-mode
+(use-package whitespace
+  :commands (whitespace-mode whitespace-cleanup)
+  :init
+  (add-hook 'prog-mode-hook
+            '(lambda ()
+               (whitespace-mode 1)))
+  )
+
 ;;; End of the configuration process.
 (when window-system
   (let ((elapsed (float-time (time-subtract (current-time)
