@@ -83,6 +83,13 @@
 (eval-after-load 'cus-edit
   (use-package initsplit))
 
+;;; ido-mode
+(use-package ido
+  :init (progn
+          (ido-mode)
+          (ido-everywhere))
+  )
+
 ;;; magit
 (use-package magit
   :bind ("C-x g" . magit-status))
