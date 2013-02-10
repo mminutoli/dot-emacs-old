@@ -28,6 +28,18 @@
   :commands (ede-minor-mode ede-cpp-root-project)
   )
 
+;; yasnippet
+(use-package yasnippet
+  :defer t
+  :commands (yas-minor-mode)
+  :init
+  (add-hook 'prog-mode-hook
+            '(lambda ()
+               (yas-minor-mode)
+               (whitespace-mode)))
+  :config (yas-reload-all)
+  )
+
 ;; cc-mode
 (use-package cc-mode
   :defer t
