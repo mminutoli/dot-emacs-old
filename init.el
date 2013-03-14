@@ -22,14 +22,21 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; Start of per package configuration
-;; ede-mode
-(use-package ede
-  :defer t
-  :commands (ede-minor-mode ede-cpp-root-project)
-  )
+;; auto-complete
+(use-package auto-complete-config
+  :load-path ("site-lisp/ac/auto-complete"
+              "site-lisp/ac/emacs-clang-complete-async"
+              "site-lisp/ac/popup-el")
+  :diminish auto-complete-mode
+  :init
+  (progn
+    (use-package pos-tip)
+    (use-package auto-complete-clang-async)
+    (ac-config-default)))
 
 ;; yasnippet
 (use-package yasnippet
+  :diminish yas/minor-mode
   :commands (yas/minor-mode yas/expand)
   :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
   :init
@@ -38,35 +45,19 @@
                (yas/minor-mode 1)))
   :config
   (progn
-    (yas/reload-all))
-  )
+    (yas--initialize)
+    (yas/load-directory (expand-file-name "snippets/" user-emacs-directory))))
 
 ;; cc-mode
 (use-package cc-mode
   :defer t
+  :init (progn
+          (defun ac-cc-mode-setup ()
+            (setq ac-sources '(ac-source-clang-async))
+            (ac-clang-launch-completion-process)
+            (auto-complete-mode t))
+          (add-hook 'c-mode-common-hook 'ac-cc-mode-setup))
   :config (progn
-          (use-package cedet
-            :init
-            (progn
-              ;; Add further minor-modes to be enabled by
-              ;; semantic-mode.  See doc-string of
-              ;; `semantic-default-submodes' for other things you can
-              ;; use here.
-              (dolist
-                  (submode
-                   '(global-semantic-idle-scheduler-mode
-                     global-semantic-idle-summary-mode
-                     global-semantic-idle-completions-mode
-
-                     global-semantic-mru-bookmark-mode
-                     ))
-                (add-to-list 'semantic-default-submodes submode t))
-              ;; Enable Semantic
-              (semantic-mode 1)))
-
-          (ede-minor-mode)
-          (use-package projects)
-
           (use-package google-c-style
             :init (progn
                     (add-hook 'c-mode-common-hook 'google-set-c-style)
@@ -104,6 +95,7 @@
 
 ;;; whitespace-mode
 (use-package whitespace
+  :disabled t
   :commands (whitespace-mode whitespace-cleanup)
   :init
   (add-hook 'prog-mode-hook
