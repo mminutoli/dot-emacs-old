@@ -1,6 +1,6 @@
 ;;; Initialization
 
-(setq message-log-max 16384)
+(setq message-log-max t)
 
 (defconst emacs-start-time (current-time))
 
@@ -30,23 +30,21 @@
   :diminish auto-complete-mode
   :init
   (progn
-    (use-package pos-tip)
     (use-package auto-complete-clang-async)
     (ac-config-default)))
 
 ;; yasnippet
 (use-package yasnippet
-  :diminish yas/minor-mode
-  :commands (yas/minor-mode yas/expand)
+  :diminish yas-minor-mode
+  :commands (yas-minor-mode yas-expand)
   :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
   :init
   (add-hook 'prog-mode-hook
             '(lambda ()
-               (yas/minor-mode 1)))
+               (yas-minor-mode 1)))
   :config
   (progn
-    (yas--initialize)
-    (yas/load-directory (expand-file-name "snippets/" user-emacs-directory))))
+    (yas--initialize)))
 
 ;; cc-mode
 (use-package cc-mode
@@ -67,7 +65,7 @@
 
 ;;; gnus
 (use-package dot-gnus
-  :bind (("M-g"   . gnus)
+  :bind (("M-G"   . gnus)
          ("C-x m" . compose-mail)))
 
 ;;; initsplit
