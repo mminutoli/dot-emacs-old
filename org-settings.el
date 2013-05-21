@@ -5,5 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    (quote
-    ("home.org" "university.org")))
- '(org-default-notes-file "~/org/notes.org"))
+    ("university.org")))
+ '(org-default-notes-file "~/org/notes.org")
+ '(org-directory "/home/mminutoli/org"))
