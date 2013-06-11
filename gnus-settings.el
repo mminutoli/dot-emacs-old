@@ -38,7 +38,9 @@
 ")
  '(gnus-thread-indent-level 2)
  '(gnus-treat-x-pgp-sig t)
- '(message-setup-hook nil)
+ '(message-setup-hook
+   (quote
+    (mml-secure-message-sign-pgpmime)))
  '(mm-verify-option
    (quote always))
  '(mml2015-sign-with-sender t)

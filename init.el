@@ -85,6 +85,8 @@
 
 ;;; org-mode
 (use-package dot-org
+  :mode ("\\.org\\'" . org-mode)
+  :commands org-agenda-list
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
 
