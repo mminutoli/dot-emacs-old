@@ -13,8 +13,6 @@
    (quote
     ((gnus-demon-scan-news 3 2))))
  '(gnus-demon-timestep 60)
- '(gnus-group-change-level-function
-   (quote gnus-topic-change-level))
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
@@ -41,6 +39,9 @@
  '(message-setup-hook
    (quote
     (mml-secure-message-sign-pgpmime)))
+ '(mm-discouraged-alternatives
+   (quote
+    ("text/html" "text/richtext")))
  '(mm-verify-option
    (quote always))
  '(mml2015-sign-with-sender t)

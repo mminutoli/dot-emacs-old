@@ -116,3 +116,4 @@
                  (message "Loading %s...done (%.3fs) [after-init]"
                           ,load-file-name elapsed)))
             t))
+(put 'downcase-region 'disabled nil)
