@@ -90,9 +90,6 @@
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
 
-;;; org2blog
-(use-package org2blog-autoloads)
-
 ;;; whitespace-mode
 (use-package whitespace
   :disabled t
