@@ -10,9 +10,6 @@
 [submodule "override/org-mode"]
 	path = override/org-mode
 	url = http://orgmode.org/org-mode.git
-[submodule "site-lisp/magit"]
-	path = site-lisp/magit
-	url = https://github.com/magit/magit.git
 [submodule "site-lisp/yasnippet"]
 	path = site-lisp/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
