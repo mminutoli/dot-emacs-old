@@ -14,7 +14,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes
    (quote
-    (tsdh-dark)))
+    (tango)))
  '(custom-file "~/.emacs.d/settings.el")
  '(ede-project-directories nil)
  '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
@@ -53,6 +53,7 @@
    (quote forward)
    nil
    (uniquify))
+ '(user-full-name "Marco Minutoli")
  '(user-mail-address "mminutoli@gmail.com")
  '(vc-handled-backends
    (quote
