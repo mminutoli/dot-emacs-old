@@ -6,8 +6,6 @@
   (expand-file-name "lisp/" user-emacs-directory))
 (defconst user-site-lisp-directory
   (expand-file-name "site-lisp/" user-emacs-directory))
-(defconst user-override-directory
-  (expand-file-name "override/" user-emacs-directory))
 
 (defun add-to-load-path (path &optional dir)
   (setq load-path
@@ -16,8 +14,7 @@
 ;; Add top-level lisp directories, in case they were not setup by the
 ;; environment.
 (dolist (dir (nreverse
-              (list user-override-directory
-                    user-lisp-directory
+              (list user-lisp-directory
                     user-site-lisp-directory)))
   (dolist (entry (nreverse (directory-files-and-attributes dir)))
     (if (cadr entry)
@@ -27,11 +24,6 @@
       (nreverse
        (list
         user-emacs-directory
-
-        "override/gnus/contrib/"
-        "override/gnus/lisp/"
-        "override/org-mode/contrib/lisp/"
-        "override/org-mode/lisp/"
         )))
 
 (let ((cl-p load-path))

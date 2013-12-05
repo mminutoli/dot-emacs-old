@@ -22,17 +22,6 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; Start of per package configuration
-;; auto-complete
-(use-package auto-complete-config
-  :load-path ("site-lisp/ac/auto-complete"
-              "site-lisp/ac/emacs-clang-complete-async"
-              "site-lisp/ac/popup-el")
-  :diminish auto-complete-mode
-  :init
-  (progn
-    (use-package auto-complete-clang-async)
-    (ac-config-default)))
-
 ;; yasnippet
 (use-package yasnippet
   :diminish yas-minor-mode
@@ -49,12 +38,6 @@
 ;; cc-mode
 (use-package cc-mode
   :defer t
-  :init (progn
-          (defun ac-cc-mode-setup ()
-            (setq ac-sources '(ac-source-clang-async))
-            (ac-clang-launch-completion-process)
-            (auto-complete-mode t))
-          (add-hook 'c-mode-common-hook 'ac-cc-mode-setup))
   :config (progn
           (use-package google-c-style
             :init (progn
@@ -78,10 +61,6 @@
           (ido-mode)
           (ido-everywhere))
   )
-
-;;; magit
-(use-package magit
-  :bind ("C-x g" . magit-status))
 
 ;;; org-mode
 (use-package dot-org
