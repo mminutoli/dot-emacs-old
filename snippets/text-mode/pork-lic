@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: pork-lic
+# --
+===- ${1:`(file-name-nondirectory (buffer-file-name))`} --${1:$(make-string (- fill-column (string-width text) 12) ?\-)}-===
+
+ The PorkSoC Project
+
+ This file is distributed under the GNU General Public Licence.
+ See LICENCE for details.
+
+===-`(make-string (- fill-column 8) ?\-)`-===
+
+$0
