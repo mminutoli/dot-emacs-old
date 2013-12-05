@@ -30,18 +30,6 @@
      ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
  '(menu-bar-mode nil)
- '(org2blog/wp-blog-alist
-   (quote
-    (("bithatbite" :url "http://bithatbite.wordpress.com/xmlrpc.php" :username "nvmind"))))
- '(safe-local-variable-values
-   (quote
-    ((eval ac-clang-update-cmdlineargs)
-     (update-flags
-      (ac-clang-update-cmdlineargs))
-     (update-flags ac-clang-update-cmdlineargs)
-     (nil ac-clang-update-cmdlineargs)
-     (ac-clang-cflags "-I/home/mminutoli/projects/llvm/src/projects/code-morphing/include" "-I/home/mminutoli/projects/llvm/src/include")
-     (ac-clang-cflags "-I~/projects/llvm/src/projects/code-morphing/include" "-I~/projects/llvm/src/include"))))
  '(scroll-bar-mode nil)
  '(semanticdb-default-save-directory "~/.emacs.d/data/semanticdb")
  '(show-paren-mode t)
