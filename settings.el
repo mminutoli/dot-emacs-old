@@ -14,14 +14,18 @@
  '(column-number-mode t)
  '(custom-enabled-themes
    (quote
-    (tango)))
+    (zenburn)))
  '(custom-file "~/.emacs.d/settings.el")
+ '(custom-safe-themes
+   (quote
+    ("0603fb5696ab4af05e7c8bb11498bd189bdb7930c7c88dd6ac1e5ec2fc3efb2b" default)))
  '(ede-project-directories nil)
  '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
  '(erc-hide-list
    (quote
     ("JOIN" "PART" "QUIT")))
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
+ '(fci-rule-color "#383838")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
@@ -43,6 +47,28 @@
    (uniquify))
  '(user-full-name "Marco Minutoli")
  '(user-mail-address "mminutoli@gmail.com")
+ '(vc-annotate-background "#2B2B2B")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#BC8383")
+     (40 . "#CC9393")
+     (60 . "#DFAF8F")
+     (80 . "#D0BF8F")
+     (100 . "#E0CF9F")
+     (120 . "#F0DFAF")
+     (140 . "#5F7F5F")
+     (160 . "#7F9F7F")
+     (180 . "#8FB28F")
+     (200 . "#9FC59F")
+     (220 . "#AFD8AF")
+     (240 . "#BFEBBF")
+     (260 . "#93E0E3")
+     (280 . "#6CA0A3")
+     (300 . "#7CB8BB")
+     (320 . "#8CD0D3")
+     (340 . "#94BFF3")
+     (360 . "#DC8CC3"))))
+ '(vc-annotate-very-old-color "#DC8CC3")
  '(vc-handled-backends
    (quote
     (Git RCS CVS SVN SCCS Bzr Hg Mtn Arch)))
