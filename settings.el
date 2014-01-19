@@ -26,6 +26,7 @@
     ("JOIN" "PART" "QUIT")))
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
  '(fci-rule-color "#383838")
+ '(global-whitespace-newline-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
