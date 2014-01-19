@@ -24,16 +24,8 @@
 ;;; Start of per package configuration
 ;; yasnippet
 (use-package yasnippet
-  :diminish yas-minor-mode
-  :commands (yas-minor-mode yas-expand)
-  :mode ("/\\.emacs\\.d/snippets/" . snippet-mode)
-  :init
-  (add-hook 'prog-mode-hook
-            '(lambda ()
-               (yas-minor-mode 1)))
-  :config
-  (progn
-    (yas--initialize)))
+  :init (yas-global-mode))
+
 
 ;; cc-mode
 (use-package cc-mode
