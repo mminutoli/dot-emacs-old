@@ -7,3 +7,6 @@
 [submodule "site-lisp/yasnippet"]
 	path = site-lisp/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "themes/zenburn"]
+	path = themes/zenburn
+	url = git@github.com:bbatsov/zenburn-emacs.git
