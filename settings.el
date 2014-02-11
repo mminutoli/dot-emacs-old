@@ -4,9 +4,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-clang-complete-executable
-   "~/.emacs.d/site-lisp/ac/emacs-clang-complete-async/clang-complete")
- '(ac-comphist-file "/home/mminutoli/.emacs.d/data/ac-comphist.dat")
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(auto-save-list-file-prefix "~/.emacs.d/data/auto-save-list/.saves-")
@@ -34,6 +31,7 @@
     (("\\`\\(org-\\)" "org-settings.el" nil nil)
      ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
  '(initsplit-pretty-print t)
+ '(ispell-program-name "aspell")
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(semanticdb-default-save-directory "~/.emacs.d/data/semanticdb")
