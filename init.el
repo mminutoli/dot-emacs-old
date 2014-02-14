@@ -22,6 +22,18 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; Start of per package configuration
+;; auctex
+(use-package tex-site
+  :load-path "site-lisp/auctex/preview"
+  :mode ("\\.tex\\'" . latex-mode)
+  :config
+  (progn
+    (use-package latex-mode
+      :defer t
+      :config
+      (progn
+        (use-package preview)))))
+
 ;; yasnippet
 (use-package yasnippet
   :init (yas-global-mode))
