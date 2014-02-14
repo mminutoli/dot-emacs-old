@@ -34,6 +34,10 @@
       (progn
         (use-package preview)))))
 
+;; company-mode
+(use-package company
+  :commands company-mode)
+
 ;; yasnippet
 (use-package yasnippet
   :init (yas-global-mode))

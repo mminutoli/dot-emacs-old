@@ -13,3 +13,6 @@
 [submodule "site-lisp/auctex"]
 	path = site-lisp/auctex
 	url = https://github.com/jwiegley/auctex.git
+[submodule "site-lisp/company-mode"]
+	path = site-lisp/company-mode
+	url = git@github.com:company-mode/company-mode.git
