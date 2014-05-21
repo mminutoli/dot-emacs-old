@@ -23,6 +23,7 @@
     ("JOIN" "PART" "QUIT")))
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
  '(fci-rule-color "#383838")
+ '(global-whitespace-mode nil)
  '(global-whitespace-newline-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -40,6 +41,7 @@
  '(tool-bar-mode nil)
  '(tramp-persistency-file-name "/home/mminutoli/.emacs.d/data/tramp")
  '(transient-mark-mode nil)
+ '(truncate-partial-width-windows t)
  '(uniquify-buffer-name-style
    (quote forward)
    nil

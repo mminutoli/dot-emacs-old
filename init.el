@@ -59,6 +59,10 @@
   :bind (("M-G"   . gnus)
          ("C-x m" . compose-mail)))
 
+;;; ggtags
+(use-package ggtags
+  :init (add-hook 'c-mode-common-hook 'ggtags-mode))
+
 ;;; initsplit
 (eval-after-load 'cus-edit
   (use-package initsplit))
@@ -76,16 +80,6 @@
   :commands org-agenda-list
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
-
-;;; whitespace-mode
-(use-package whitespace
-  :disabled t
-  :commands (whitespace-mode whitespace-cleanup)
-  :init
-  (add-hook 'prog-mode-hook
-            '(lambda ()
-               (whitespace-mode 1)))
-  )
 
 ;;; End of the configuration process.
 (when window-system
