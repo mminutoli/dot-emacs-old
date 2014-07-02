@@ -46,13 +46,18 @@
 ;; cc-mode
 (use-package cc-mode
   :defer t
+  :init (progn
+          (defun my-cc-mode-hook ()
+            (local-set-key (kbd "<f5>") 'recompile))
+          (add-hook 'c-mode-common-hook 'my-cc-mode-hook))
   :config (progn
           (use-package google-c-style
             :init (progn
                     (add-hook 'c-mode-common-hook 'google-set-c-style)
-                    (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-                    ))
-          ))
+                    (add-hook 'c-mode-common-hook 'google-make-newline-indent))
+            :config
+            (progn
+              (c-set-offset 'statement-case-open 0)))))
 
 ;;; gnus
 (use-package dot-gnus
