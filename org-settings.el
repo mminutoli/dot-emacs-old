@@ -6,6 +6,11 @@
  '(org-agenda-files
    (quote
     ("~/org/university.org" "~/org/panda.org")))
+ '(org-capture-templates
+   (quote
+    (("p" "Panda Task" entry
+      (file+headline "~/org/panda.org" "Tasks")
+      "** TODO %?\\n  %t\\n  %i\\n"))))
  '(org-columns-default-format "%40ITEM(Task) %17Effort(Estimated Effort){:} %CLOCKSUM")
  '(org-default-notes-file "~/org/notes.org")
  '(org-directory "/home/mminutoli/org")
