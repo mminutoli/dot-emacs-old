@@ -79,6 +79,10 @@
           (ido-everywhere))
   )
 
+;;; markdown-mode
+(use-package markdown-mode
+  :mode ("\\.md" . markdown-mode))
+
 ;;; org-mode
 (use-package dot-org
   :mode ("\\.org\\'" . org-mode)

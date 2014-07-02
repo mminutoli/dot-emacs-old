@@ -19,3 +19,6 @@
 [submodule "site-lisp/ggtags"]
 	path = site-lisp/ggtags
 	url = git@github.com:leoliu/ggtags.git
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = git@github.com:emacsmirror/markdown-mode.git
