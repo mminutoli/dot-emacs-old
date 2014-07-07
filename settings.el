@@ -83,4 +83,4 @@
  ;; If there is more than one, they won't work right.
  '(default
     ((t
-      (:height 105 :family "Inconsolata")))))
+      (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Inconsolata")))))
