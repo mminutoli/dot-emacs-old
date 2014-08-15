@@ -22,3 +22,9 @@
 [submodule "site-lisp/markdown-mode"]
 	path = site-lisp/markdown-mode
 	url = git@github.com:emacsmirror/markdown-mode.git
+[submodule "themes/solarized"]
+	path = themes/solarized
+	url = git@github.com:sellout/emacs-color-theme-solarized.git
+[submodule "site-lisp/emacs-w3m"]
+	path = site-lisp/emacs-w3m
+	url = git@github.com:emacsmirror/w3m.git

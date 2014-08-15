@@ -14,6 +14,18 @@
 ;;; Packages configuration
 (load (expand-file-name "settings" user-emacs-directory))
 
+;;; Set cursor type
+(setq-default cursor-type 'bar)
+
+;;; Set theme
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (select-frame frame)
+                (load-theme 'solarized-light t)))
+  (load-theme 'solarized-light t)
+)
+
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
 (put 'upcase-region 'disabled nil)
@@ -30,13 +42,21 @@
   (progn
     (use-package latex-mode
       :defer t
+      :init
+      (progn
+        (add-hook 'LaTeX-mode-hook
+                  (lambda ()
+                    (setq fill-column 80)
+                    (auto-fill-mode)
+                    (flyspell-mode))))
       :config
       (progn
         (use-package preview)))))
 
+
 ;; company-mode
 (use-package company
-  :commands company-mode)
+  :init global-company-mode)
 
 ;; yasnippet
 (use-package yasnippet
@@ -62,7 +82,8 @@
 ;;; gnus
 (use-package dot-gnus
   :bind (("M-G"   . gnus)
-         ("C-x m" . compose-mail)))
+         ("C-x m" . compose-mail))
+  :init (use-package w3m))
 
 ;;; ggtags
 (use-package ggtags

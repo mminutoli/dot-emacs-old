@@ -7,24 +7,30 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
  '(auto-save-list-file-prefix "~/.emacs.d/data/auto-save-list/.saves-")
+ '(background-color nil)
+ '(background-mode light)
  '(blink-cursor-mode nil)
  '(column-number-mode t)
- '(custom-enabled-themes
-   (quote
-    (zenburn)))
+ '(cursor-color nil)
+ '(custom-enabled-themes nil)
  '(custom-file "~/.emacs.d/settings.el")
  '(custom-safe-themes
    (quote
-    ("0603fb5696ab4af05e7c8bb11498bd189bdb7930c7c88dd6ac1e5ec2fc3efb2b" default)))
+    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "3c9d994e18db86ae397d077b6324bfdc445ecc7dc81bb9d528cd9bba08c1dac1" "0603fb5696ab4af05e7c8bb11498bd189bdb7930c7c88dd6ac1e5ec2fc3efb2b" default)))
  '(ede-project-directories nil)
  '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
  '(erc-hide-list
    (quote
     ("JOIN" "PART" "QUIT")))
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
+ '(exec-path
+   (quote
+    ("/usr/local/sbin" "/usr/local/bin" "/usr/sbin" "/usr/bin" "/usr/lib/emacs/24.3/x86_64-unknown-linux-gnu" "/home/mminutoli/projects/llvm/root/bin")))
  '(fci-rule-color "#383838")
+ '(font-latex-fontify-script nil)
+ '(foreground-color nil)
  '(global-whitespace-mode nil)
- '(global-whitespace-newline-mode t)
+ '(global-whitespace-newline-mode nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
@@ -83,4 +89,4 @@
  ;; If there is more than one, they won't work right.
  '(default
     ((t
-      (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "unknown" :family "Inconsolata")))))
+      (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "adobe" :family "Source Code Pro")))))

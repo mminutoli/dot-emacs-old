@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    (quote
-    ("~/org/university.org" "~/org/panda.org")))
+    ("~/org/university.org" "~/org/panda.org" "~/org/papers.org")))
  '(org-capture-templates
    (quote
     (("p" "Panda Task" entry

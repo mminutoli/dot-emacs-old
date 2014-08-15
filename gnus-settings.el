@@ -13,20 +13,36 @@
    (quote
     ((gnus-demon-scan-news 3 2))))
  '(gnus-demon-timestep 60)
+ '(gnus-gcc-mark-as-read t)
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
  '(gnus-init-file "~/.emacs.d/dot-gnus.el")
- '(gnus-message-archive-group nil)
+ '(gnus-message-archive-group
+   (quote
+    (("polimi" "nnimap+polimi:Sent Items")
+     (".*" nil))))
  '(gnus-message-replysign t)
  '(gnus-message-setup-hook
    (quote
     (mml-secure-message-sign-pgpmime)))
  '(gnus-notifications-use-google-contacts nil)
  '(gnus-notifications-use-gravatar nil)
+ '(gnus-posting-styles
+   (quote
+    (("polimi"
+      (name "Marco Minutoli")
+      (address "marco.minutoli@mail.polimi.it"))
+     ((message-news-p)
+      (name "Marco Minutoli")
+      (address "mminutoli@gmail.com")))))
  '(gnus-secondary-select-methods
    (quote
-    ((nntp "news.gmane.org"))))
+    ((nnimap "polimi"
+             (nnimap-stream ssl)
+             (nnimap-server-port 993)
+             (nnimap-address "outlook.office365.com"))
+     (nntp "news.gmane.org"))))
  '(gnus-select-method
    (quote
     (nnimap "imap.gmail.com"
@@ -42,12 +58,15 @@
  '(mm-discouraged-alternatives
    (quote
     ("text/html" "text/richtext")))
+ '(mm-inline-text-html-with-images t)
+ '(mm-text-html-renderer
+   (quote w3m))
  '(mm-verify-option
    (quote always))
  '(mml2015-sign-with-sender t)
  '(send-mail-function
    (quote smtpmail-send-it))
- '(smtpmail-default-smtp-server "smtp.gmai.com")
+ '(smtpmail-default-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 587)
  '(smtpmail-smtp-user "mminutoli@gmail.com")
