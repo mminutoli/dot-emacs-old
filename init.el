@@ -29,6 +29,7 @@
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 ;;; Key bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -56,7 +57,8 @@
 
 ;; company-mode
 (use-package company
-  :init global-company-mode)
+  :init (progn
+          (global-company-mode 1)))
 
 ;; yasnippet
 (use-package yasnippet
@@ -78,6 +80,11 @@
             :config
             (progn
               (c-set-offset 'statement-case-open 0)))))
+
+;; flycheck
+(use-package flycheck
+  :init (progn
+          (global-flycheck-mode 1)))
 
 ;;; gnus
 (use-package dot-gnus
@@ -111,6 +118,11 @@
   :bind (("C-c a" . org-agenda)
          ("C-c c" . org-capture)))
 
+;;; projectile
+(use-package projectile
+  :init (progn
+          (projectile-global-mode 1)))
+
 ;;; End of the configuration process.
 (when window-system
   (let ((elapsed (float-time (time-subtract (current-time)
@@ -124,4 +136,3 @@
                  (message "Loading %s...done (%.3fs) [after-init]"
                           ,load-file-name elapsed)))
             t))
-(put 'downcase-region 'disabled nil)

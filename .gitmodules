@@ -28,3 +28,21 @@
 [submodule "site-lisp/emacs-w3m"]
 	path = site-lisp/emacs-w3m
 	url = git@github.com:emacsmirror/w3m.git
+[submodule "site-lisp/flycheck"]
+	path = site-lisp/flycheck
+	url = git@github.com:flycheck/flycheck.git
+[submodule "lisp/dash"]
+	path = lisp/dash
+	url = git@github.com:magnars/dash.el.git
+[submodule "site-lisp/projectile"]
+	path = site-lisp/projectile
+	url = git@github.com:bbatsov/projectile.git
+[submodule "lisp/s"]
+	path = lisp/s
+	url = git@github.com:magnars/s.el.git
+[submodule "lisp/pkg-info"]
+	path = lisp/pkg-info
+	url = git@github.com:lunaryorn/pkg-info.el.git
+[submodule "lisp/epl"]
+	path = lisp/epl
+	url = git@github.com:cask/epl.git

@@ -1,5 +1,7 @@
-;;; Gnus configuration
-
+;;; dot-gnus.el -- Gnus configuration
+;;; Commentary:
+;;;   Gnus configuration.
+;;; Code:
 (load "gnus-settings")
 
 (require 'gnus)
@@ -74,3 +76,4 @@
     ad-do-it))
 
 (provide 'dot-gnus)
+;;; dot-gnus.el ends here

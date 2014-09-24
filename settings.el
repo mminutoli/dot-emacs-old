@@ -36,7 +36,8 @@
  '(initsplit-customizations-alist
    (quote
     (("\\`\\(org-\\)" "org-settings.el" nil nil)
-     ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil))))
+     ("\\`\\(gnus\\|nn\\|message\\|mail\\|mm-\\|mml2015\\|smtp\\|send-mail\\|check-mail\\|spam\\|sc-\\)" "gnus-settings.el" nil nil)
+     ("\\`\\(safe-local-variable-values\\|safe-local-eval-forms\\)" "safe-local-variable-values.el" t t))))
  '(initsplit-pretty-print t)
  '(ispell-program-name "aspell")
  '(menu-bar-mode nil)
