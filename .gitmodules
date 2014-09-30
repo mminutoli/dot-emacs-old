@@ -46,3 +46,6 @@
 [submodule "lisp/epl"]
 	path = lisp/epl
 	url = git@github.com:cask/epl.git
+[submodule "site-lisp/bbdb"]
+	path = site-lisp/bbdb
+	url = git@github.com:emacsmirror/bbdb.git
