@@ -30,6 +30,8 @@
       (nreverse
        (list
         user-emacs-directory
+
+        "site-lisp/bbdb/lisp"
         )))
 
 (let ((cl-p load-path))

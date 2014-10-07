@@ -54,6 +54,15 @@
       (progn
         (use-package preview)))))
 
+;; bbdb
+(use-package bbdb-loaddefs
+  :init
+  (progn
+    (bbdb-initialize 'gnus 'message 'pgp)
+
+    (bbdb-mua-auto-update-init 'gnus 'message 'pgp))
+  )
+
 
 ;; company-mode
 (use-package company

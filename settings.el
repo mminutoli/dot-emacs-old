@@ -9,6 +9,14 @@
  '(auto-save-list-file-prefix "~/.emacs.d/data/auto-save-list/.saves-")
  '(background-color nil)
  '(background-mode light)
+ '(bbdb-mua-auto-update-p
+   (quote query))
+ '(bbdb/message-update-records-p
+   (lambda nil
+     (let
+         ((bbdb-update-records-p
+           (quote query)))
+       (bbdb-select-message))))
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cursor-color nil)
