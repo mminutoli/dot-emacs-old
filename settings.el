@@ -9,14 +9,25 @@
  '(auto-save-list-file-prefix "~/.emacs.d/data/auto-save-list/.saves-")
  '(background-color nil)
  '(background-mode light)
- '(bbdb-mua-auto-update-p
-   (quote query))
+ '(bbdb-auto-notes-ignore-messages nil)
+ '(bbdb-horiz-pop-up-window-size
+   (quote
+    (112 . 0.3)))
+ '(bbdb-ignore-message-alist
+   (quote
+    (("From" . "no.?reply\\|daemon\\|DAEMON\\|facebookmail\\|twitter"))))
+ '(bbdb-mua-pop-up-window-size 5)
  '(bbdb/message-update-records-p
    (lambda nil
      (let
          ((bbdb-update-records-p
            (quote query)))
        (bbdb-select-message))))
+ '(bbdb/vm-auto-folder-field
+   (quote vm-folder))
+ '(bbdb/vm-virtual-folder-field
+   (quote vm-virtual))
+ '(bbdb/vm-virtual-real-folders nil)
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cursor-color nil)
@@ -35,8 +46,11 @@
    (quote
     ("/usr/local/sbin" "/usr/local/bin" "/usr/sbin" "/usr/bin" "/usr/lib/emacs/24.3/x86_64-unknown-linux-gnu" "/home/mminutoli/projects/llvm/root/bin")))
  '(fci-rule-color "#383838")
+ '(flycheck-verilog-verilator-executable "/usr/bin/verilator_bin")
  '(font-latex-fontify-script nil)
  '(foreground-color nil)
+ '(global-flycheck-mode t nil
+                        (flycheck))
  '(global-whitespace-mode nil)
  '(global-whitespace-newline-mode nil)
  '(indent-tabs-mode nil)
@@ -88,6 +102,8 @@
  '(vc-handled-backends
    (quote
     (Git RCS CVS SVN SCCS Bzr Hg Mtn Arch)))
+ '(verilog-auto-arg-sort t)
+ '(verilog-case-fold nil)
  '(yas-prompt-functions
    (quote
     (yas-ido-prompt yas-no-prompt))))

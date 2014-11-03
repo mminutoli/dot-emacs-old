@@ -6,6 +6,16 @@
  '(safe-local-variable-values
    (quote
     ((eval progn
+           (setq project-include-dir
+                 (list "include"))
+           (setq project-include-dir
+                 (mapcar
+                  (lambda
+                    (dir)
+                    (expand-file-name dir
+                                      (projectile-project-root)))
+                  project-include-dir)))
+     (eval progn
            (setq flycheck-clang-include-path project-include-dir)
            (setq flycheck-clang-language-standard "c++11")
            (setq flycheck-clang-warnings

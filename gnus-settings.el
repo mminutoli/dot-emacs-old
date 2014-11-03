@@ -17,6 +17,7 @@
  '(gnus-group-mode-hook
    (quote
     (gnus-topic-mode gnus-agent-mode)))
+ '(gnus-inhibit-startup-message t)
  '(gnus-init-file "~/.emacs.d/dot-gnus.el")
  '(gnus-message-archive-group
    (quote
@@ -36,6 +37,7 @@
      ((message-news-p)
       (name "Marco Minutoli")
       (address "mminutoli@gmail.com")))))
+ '(gnus-save-newsrc-file nil)
  '(gnus-secondary-select-methods
    (quote
     ((nnimap "polimi"

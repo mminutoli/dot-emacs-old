@@ -1,5 +1,8 @@
-;;; Initialization
+;;; package --- Marco Minutoli's dotEmacs
 
+;;; Commentary:
+
+;;; Code:
 (setq message-log-max t)
 
 (defconst emacs-start-time (current-time))
@@ -145,3 +148,5 @@
                  (message "Loading %s...done (%.3fs) [after-init]"
                           ,load-file-name elapsed)))
             t))
+
+;;; init.el ends here
