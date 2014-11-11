@@ -36,6 +36,11 @@
 
 ;;; Key bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "<f12>") 'org-agenda)
+(global-set-key (kbd "S-<f11>") 'org-clock-goto)
+(global-set-key (kbd "<f10>") 'org-clock-in)
+(global-set-key (kbd "<f11>") 'org-clock-out)
 
 ;;; Start of per package configuration
 ;; auctex
@@ -100,7 +105,7 @@
 
 ;;; gnus
 (use-package dot-gnus
-  :bind (("M-G"   . gnus)
+  :bind (("<f9> g"   . gnus)
          ("C-x m" . compose-mail))
   :init (use-package w3m))
 
@@ -124,11 +129,7 @@
   :mode ("\\.md" . markdown-mode))
 
 ;;; org-mode
-(use-package dot-org
-  :mode ("\\.org\\'" . org-mode)
-  :commands org-agenda-list
-  :bind (("C-c a" . org-agenda)
-         ("C-c c" . org-capture)))
+(use-package dot-org)
 
 ;;; projectile
 (use-package projectile
