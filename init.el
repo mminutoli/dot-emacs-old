@@ -25,8 +25,8 @@
     (add-hook 'after-make-frame-functions
               (lambda (frame)
                 (select-frame frame)
-                (load-theme 'solarized-light t)))
-  (load-theme 'solarized-light t)
+                (load-theme 'solarized-dark t)))
+  (load-theme 'solarized-dark t)
 )
 
 ;;; Enable disabled command
