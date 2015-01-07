@@ -56,7 +56,8 @@
  '(gnus-treat-x-pgp-sig t)
  '(message-setup-hook
    (quote
-    (mml-secure-message-sign-pgpmime)))
+    (mml-secure-message-sign-pgpmime))
+   t)
  '(mm-discouraged-alternatives
    (quote
     ("text/html" "text/richtext")))
