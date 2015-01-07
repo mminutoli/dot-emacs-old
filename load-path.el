@@ -6,12 +6,14 @@
   (expand-file-name "lisp/" user-emacs-directory))
 (defconst user-site-lisp-directory
   (expand-file-name "site-lisp/" user-emacs-directory))
+(defconst user-settings-directory
+  (expand-file-name "settings/" user-emacs-directory))
 (defconst user-site-themes-directory
   (expand-file-name "themes/" user-emacs-directory))
 
 (defun add-to-load-path (path &optional dir)
   (setq load-path
-        (cons (expand-file-name path (or dir user-emacs-directory)) load-path)))
+        (cons (expand-file-name path (or dir user-lisp-directory)) load-path)))
 
 (defun add-to-themes-load-path (path &optional dir)
   (add-to-list 'custom-theme-load-path
@@ -20,16 +22,17 @@
 ;; Add top-level lisp directories, in case they were not setup by the
 ;; environment.
 (dolist (dir (nreverse
-              (list user-lisp-directory
+              (list user-settings-directory
+                    user-lisp-directory
                     user-site-lisp-directory)))
-  (dolist (entry (nreverse (directory-files-and-attributes dir)))
+  (dolist (entry (nreverse (directory-files-and-attributes dir nil "[^\.,\.\.]")))
     (if (cadr entry)
         (add-to-load-path (car entry) dir))))
 
 (mapc #'add-to-load-path
       (nreverse
        (list
-        user-emacs-directory
+        user-settings-directory
 
         "site-lisp/bbdb/lisp"
         )))
