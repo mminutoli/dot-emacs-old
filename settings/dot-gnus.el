@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;;   Gnus configuration.
 ;;; Code:
-(load "gnus-settings")
+(load (expand-file-name "gnus-settings" user-emacs-directory))
 
 (require 'gnus)
 (require 'gnus-demon)

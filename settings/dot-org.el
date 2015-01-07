@@ -1,5 +1,5 @@
 ;;; Org-mode
-(load "org-settings")
+(load (expand-file-name "org-settings" user-emacs-directory))
 
 (require 'org)
 (require 'org-agenda)

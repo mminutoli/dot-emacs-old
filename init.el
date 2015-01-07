@@ -15,7 +15,7 @@
 (require 'use-package)
 
 ;;; Packages configuration
-(load (expand-file-name "settings" user-settings-directory))
+(load (expand-file-name "settings" user-emacs-directory))
 
 ;;; Set cursor type
 (setq-default cursor-type 'bar)
