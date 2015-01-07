@@ -31,11 +31,13 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cursor-color nil)
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes
+   (quote
+    (solarized)))
  '(custom-file "~/.emacs.d/settings.el")
  '(custom-safe-themes
    (quote
-    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "3c9d994e18db86ae397d077b6324bfdc445ecc7dc81bb9d528cd9bba08c1dac1" "0603fb5696ab4af05e7c8bb11498bd189bdb7930c7c88dd6ac1e5ec2fc3efb2b" default)))
+    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(ede-project-directories nil)
  '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
  '(erc-hide-list
@@ -48,11 +50,8 @@
  '(fci-rule-color "#383838")
  '(flycheck-verilog-verilator-executable "/usr/bin/verilator_bin")
  '(font-latex-fontify-script nil)
+ '(font-use-system-font t)
  '(foreground-color nil)
- '(global-flycheck-mode t nil
-                        (flycheck))
- '(global-whitespace-mode nil)
- '(global-whitespace-newline-mode nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
@@ -65,16 +64,10 @@
  '(menu-bar-mode nil)
  '(scroll-bar-mode nil)
  '(semanticdb-default-save-directory "~/.emacs.d/data/semanticdb")
- '(show-paren-mode t)
  '(srecode-map-save-file "~/.emacs.d/data/srecode-map.el")
  '(tool-bar-mode nil)
  '(tramp-persistency-file-name "/home/mminutoli/.emacs.d/data/tramp")
- '(transient-mark-mode nil)
  '(truncate-partial-width-windows t)
- '(uniquify-buffer-name-style
-   (quote forward)
-   nil
-   (uniquify))
  '(user-full-name "Marco Minutoli")
  '(user-mail-address "mminutoli@gmail.com")
  '(vc-annotate-background "#2B2B2B")
@@ -114,4 +107,4 @@
  ;; If there is more than one, they won't work right.
  '(default
     ((t
-      (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "adobe" :family "Source Code Pro")))))
+      (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 83 :width normal :foundry "adobe" :family "Source Code Pro")))))

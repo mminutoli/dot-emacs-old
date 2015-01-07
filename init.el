@@ -20,15 +20,6 @@
 ;;; Set cursor type
 (setq-default cursor-type 'bar)
 
-;;; Set theme
-(if (daemonp)
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (select-frame frame)
-                (load-theme 'solarized-dark t)))
-  (load-theme 'solarized-dark t)
-)
-
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
 (put 'upcase-region 'disabled nil)
