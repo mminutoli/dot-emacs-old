@@ -32,6 +32,8 @@
 (global-set-key (kbd "S-<f11>") 'org-clock-goto)
 (global-set-key (kbd "<f10>") 'org-clock-in)
 (global-set-key (kbd "<f11>") 'org-clock-out)
+(global-set-key (kbd "<f9> g") 'gnus)
+(global-set-key (kbd "C-x m") 'compose-mail)
 
 ;;; Start of per package configuration
 ;; auctex
@@ -96,8 +98,6 @@
 
 ;;; gnus
 (use-package dot-gnus
-  :bind (("<f9> g"   . gnus)
-         ("C-x m" . compose-mail))
   :init (use-package w3m))
 
 ;;; ggtags
