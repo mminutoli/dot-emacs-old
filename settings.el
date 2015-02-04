@@ -52,6 +52,8 @@
  '(font-latex-fontify-script nil)
  '(font-use-system-font t)
  '(foreground-color nil)
+ '(frame-background-mode
+   (quote dark))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist
@@ -107,4 +109,7 @@
  ;; If there is more than one, they won't work right.
  '(default
     ((t
-      (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 83 :width normal :foundry "adobe" :family "Source Code Pro")))))
+      (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 83 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
+ '(cursor
+   ((t
+     (:background "dark orange" :foreground "orange")))))
