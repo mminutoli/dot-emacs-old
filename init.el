@@ -108,13 +108,6 @@
 (eval-after-load 'cus-edit
   (use-package initsplit))
 
-;;; ido-mode
-(use-package ido
-  :init (progn
-          (ido-mode)
-          (ido-everywhere))
-  )
-
 ;;; markdown-mode
 (use-package markdown-mode
   :mode ("\\.md" . markdown-mode))
