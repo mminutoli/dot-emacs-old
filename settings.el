@@ -31,6 +31,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cursor-color nil)
+ '(cursor-type t)
  '(custom-enabled-themes
    (quote
     (solarized)))
@@ -44,9 +45,6 @@
    (quote
     ("JOIN" "PART" "QUIT")))
  '(eshell-directory-name "~/.emacs.d/data/eshell/")
- '(exec-path
-   (quote
-    ("/usr/local/sbin" "/usr/local/bin" "/usr/sbin" "/usr/bin" "/usr/lib/emacs/24.3/x86_64-unknown-linux-gnu" "/home/mminutoli/projects/llvm/root/bin")))
  '(fci-rule-color "#383838")
  '(flycheck-verilog-verilator-executable "/usr/bin/verilator_bin")
  '(font-latex-fontify-script nil)
@@ -112,4 +110,4 @@
       (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 83 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
  '(cursor
    ((t
-     (:background "dark orange" :foreground "orange")))))
+     (:background "orange")))))

@@ -17,9 +17,6 @@
 ;;; Packages configuration
 (load (expand-file-name "settings" user-emacs-directory))
 
-;;; Set cursor type
-(setq-default cursor-type 'bar)
-
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
 (put 'upcase-region 'disabled nil)
