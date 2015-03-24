@@ -16,7 +16,7 @@
  '(gnus-gcc-mark-as-read t)
  '(gnus-group-mode-hook
    (quote
-    (gnus-topic-mode gnus-agent-mode)))
+    (gnus-agent-mode)))
  '(gnus-inhibit-startup-message t)
  '(gnus-init-file "~/.emacs.d/settings/dot-gnus.el")
  '(gnus-message-archive-group
@@ -38,13 +38,7 @@
       (name "Marco Minutoli")
       (address "mminutoli@gmail.com")))))
  '(gnus-save-newsrc-file nil)
- '(gnus-secondary-select-methods
-   (quote
-    ((nnimap "polimi"
-             (nnimap-stream ssl)
-             (nnimap-server-port 993)
-             (nnimap-address "outlook.office365.com"))
-     (nntp "news.gmane.org"))))
+ '(gnus-secondary-select-methods nil)
  '(gnus-select-method
    (quote
     (nnimap "imap.gmail.com"

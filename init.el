@@ -101,6 +101,19 @@
 (use-package ggtags
   :init (add-hook 'c-mode-common-hook 'ggtags-mode))
 
+;;; Helm
+(use-package helm-config
+  :init
+  (progn
+    (helm-mode 1)
+    (global-set-key (kbd "C-c h") 'helm-command-prefix)
+    (global-unset-key (kbd "C-x c"))
+
+    (global-set-key (kbd "M-x") 'helm-M-x)
+    (global-set-key (kbd "C-x C-f") 'helm-find-files)
+    (global-set-key (kbd "C-x b") 'helm-mini)))
+
+
 ;;; initsplit
 (eval-after-load 'cus-edit
   (use-package initsplit))
