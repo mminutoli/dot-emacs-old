@@ -32,8 +32,9 @@
 (mapc #'add-to-load-path
       (nreverse
        (list
+        user-lisp-directory
+        user-site-lisp-directory
         user-settings-directory
-
         "site-lisp/bbdb/lisp"
         )))
 

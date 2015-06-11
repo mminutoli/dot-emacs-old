@@ -22,15 +22,10 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
+
 ;;; Key bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "<f12>") 'org-agenda)
-(global-set-key (kbd "S-<f11>") 'org-clock-goto)
-(global-set-key (kbd "<f10>") 'org-clock-in)
-(global-set-key (kbd "<f11>") 'org-clock-out)
-(global-set-key (kbd "<f9> g") 'gnus)
-(global-set-key (kbd "C-x m") 'compose-mail)
+
 
 ;;; Start of per package configuration
 ;; auctex
@@ -54,22 +49,20 @@
 
 ;; bbdb
 (use-package bbdb-loaddefs
-  :init
+  :config
   (progn
     (bbdb-initialize 'gnus 'message 'pgp)
-
-    (bbdb-mua-auto-update-init 'gnus 'message 'pgp))
-  )
+    (bbdb-mua-auto-update-init 'gnus 'message 'pgp)))
 
 
 ;; company-mode
 (use-package company
-  :init (progn
-          (global-company-mode 1)))
+  :commands company-mode)
 
 ;; yasnippet
 (use-package yasnippet
-  :init (yas-global-mode))
+  :defer 5
+  :config (yas-global-mode))
 
 
 ;; cc-mode
@@ -80,55 +73,69 @@
             (local-set-key (kbd "<f5>") 'recompile))
           (add-hook 'c-mode-common-hook 'my-cc-mode-hook))
   :config (progn
-          (use-package google-c-style
-            :init (progn
-                    (add-hook 'c-mode-common-hook 'google-set-c-style)
-                    (add-hook 'c-mode-common-hook 'google-make-newline-indent))
-            :config
-            (progn
-              (c-set-offset 'statement-case-open 0)))))
+            ;;; ggtags
+            (use-package ggtags :config (ggtags-mode))
+            (use-package google-c-style
+              :init (progn
+                      (add-hook 'c-mode-common-hook
+                                (lambda ()
+                                  (google-set-c-style)
+                                  (google-make-newline-indent))))
+              :config
+              (progn
+                (c-set-offset 'statement-case-open 0)))))
 
 ;; flycheck
 (use-package flycheck
-  :init (progn
-          (global-flycheck-mode 1)))
+  :defer 5
+  :config (progn
+            (global-flycheck-mode 1)))
 
 ;;; gnus
 (use-package dot-gnus
-  :init (use-package w3m))
-
-;;; ggtags
-(use-package ggtags
-  :init (add-hook 'c-mode-common-hook 'ggtags-mode))
+  :bind (("<f9> g" . gnus)
+         ("C-x m" . compose-mail))
+  :config (use-package w3m))
 
 ;;; Helm
 (use-package helm-config
-  :init
+  :bind (("C-c h" . helm-command-prefix)
+         ("M-x" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x b" . helm-mini))
+  :config
   (progn
-    (helm-mode 1)
-    (global-set-key (kbd "C-c h") 'helm-command-prefix)
-    (global-unset-key (kbd "C-x c"))
-
-    (global-set-key (kbd "M-x") 'helm-M-x)
-    (global-set-key (kbd "C-x C-f") 'helm-find-files)
-    (global-set-key (kbd "C-x b") 'helm-mini)))
+    (use-package helm-mode
+      :diminish helm-mode
+      :init (helm-mode 1))
+    (global-unset-key (kbd "C-x c"))))
 
 
 ;;; initsplit
 (eval-after-load 'cus-edit
-  (use-package initsplit))
+  (lambda ()
+    (use-package initsplit)))
 
 ;;; markdown-mode
 (use-package markdown-mode
   :mode ("\\.md" . markdown-mode))
 
 ;;; org-mode
-(use-package dot-org)
+(use-package dot-org
+  :init
+  (progn
+    (use-package org
+      :mode ("\\.org" . org-mode))
+    (use-package org-agenda
+      :bind ("<f12>" . org-agenda))
+    (use-package org-capture
+      :bind ("C-c c" . org-capture))))
 
 ;;; projectile
 (use-package projectile
-  :init (progn
-          (projectile-global-mode 1)))
+  :defer 5
+  :config (progn
+            (projectile-global-mode 1)))
 
 ;;; End of the configuration process.
 (when window-system

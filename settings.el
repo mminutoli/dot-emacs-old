@@ -32,9 +32,6 @@
  '(column-number-mode t)
  '(cursor-color nil)
  '(cursor-type t)
- '(custom-enabled-themes
-   (quote
-    (solarized)))
  '(custom-file "~/.emacs.d/settings.el")
  '(custom-safe-themes
    (quote

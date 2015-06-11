@@ -55,3 +55,6 @@
 [submodule "site-lisp/helm"]
 	path = site-lisp/helm
 	url = git@github.com:emacs-helm/helm.git
+[submodule "lisp/f"]
+	path = lisp/f
+	url = git@github.com:rejeep/f.el.git
