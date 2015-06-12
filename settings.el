@@ -35,7 +35,7 @@
  '(custom-file "~/.emacs.d/settings.el")
  '(custom-safe-themes
    (quote
-    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("e4e97731f52a5237f37ceb2423cb327778c7d3af7dc831788473d4a76bcc9760" "1297a022df4228b81bc0436230f211bad168a117282c20ddcba2db8c6a200743" "31a01668c84d03862a970c471edbd377b2430868eccf5e8a9aec6831f1a0908d" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
  '(ede-project-directories nil)
  '(ede-project-placeholder-cache-file "~/.emacs.d/data/ede-projects.el")
  '(erc-hide-list
@@ -47,8 +47,7 @@
  '(font-latex-fontify-script nil)
  '(font-use-system-font t)
  '(foreground-color nil)
- '(frame-background-mode
-   (quote dark))
+ '(frame-background-mode nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initsplit-customizations-alist

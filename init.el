@@ -95,6 +95,9 @@
 (use-package dot-gnus
   :bind (("<f9> g" . gnus)
          ("C-x m" . compose-mail))
+  :init
+  (setq gnus-init-file (expand-file-name "dot-gnus" user-emacs-directory)
+
   :config (use-package w3m))
 
 ;;; Helm
@@ -112,9 +115,11 @@
 
 
 ;;; initsplit
-(eval-after-load 'cus-edit
-  (lambda ()
-    (use-package initsplit)))
+(use-package cus-edit
+  :defer 5
+  :init
+  (use-package initsplit))
+
 
 ;;; markdown-mode
 (use-package markdown-mode
