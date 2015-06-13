@@ -10,12 +10,26 @@
 (unless noninteractive
   (message "Loading %s..." load-file-name))
 
-(load (expand-file-name "load-path" (file-name-directory load-file-name)))
+;; (load (expand-file-name "load-path" (file-name-directory load-file-name)))
+(defvar user-data-directory (expand-file-name "data/" user-emacs-directory))
+
+(mapc
+ #'(lambda (path)
+     (push (expand-file-name path user-emacs-directory) load-path))
+ '("site-lisp" "lisp" "lisp/use-package"))
+
+(load (expand-file-name "settings" user-emacs-directory))
 
 (require 'use-package)
 
+;;; Libraries
+(use-package dash :defer t :load-path "lisp/dash")
+(use-package deferred :defer t :load-path "lisp/deferred")
+(use-package f :defer t :load-path "lisp/f")
+(use-package s :defer t :load-path "lisp/s")
+
 ;;; Packages configuration
-(load (expand-file-name "settings" user-emacs-directory))
+;; (load (expand-file-name "settings" user-emacs-directory))
 
 ;;; Enable disabled command
 (put 'narrow-to-region 'disabled nil)  ;;; Narrow to region (C-x n n)
@@ -57,12 +71,14 @@
 
 ;; company-mode
 (use-package company
+  :load-path "site-lisp/company-mode"
   :defer 5
   :commands company-mode
   :config (global-company-mode 1))
 
 ;; yasnippet
 (use-package yasnippet
+  :load-path "yasnippet"
   :defer 5
   :config (yas-global-mode 1))
 
@@ -89,9 +105,9 @@
 
 ;; flycheck
 (use-package flycheck
+  :load-path "site-lisp/flycheck"
   :defer 5
-  :config (progn
-            (global-flycheck-mode 1)))
+  :config (global-flycheck-mode 1))
 
 ;;; gnus
 (use-package dot-gnus
@@ -104,6 +120,7 @@
 
 ;;; Helm
 (use-package helm-config
+  :load-path "site-lisp/helm"
   :bind (("C-c h" . helm-command-prefix)
          ("M-x" . helm-M-x)
          ("C-x C-f" . helm-find-files)
@@ -119,11 +136,13 @@
 ;;; initsplit
 (use-package cus-edit
   :config
-  (use-package initsplit))
+  (use-package initsplit
+    :load-path "lisp/initsplit"))
 
 
 ;;; markdown-mode
 (use-package markdown-mode
+  :load-path "site-lisp/markdown-mode"
   :mode ("\\.md" . markdown-mode))
 
 ;;; org-mode
@@ -139,6 +158,7 @@
 
 ;;; projectile
 (use-package projectile
+  :load-path "site-lisp/projectile"
   :defer 5
   :config (progn
             (projectile-global-mode 1)))
