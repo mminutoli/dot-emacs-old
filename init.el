@@ -57,12 +57,14 @@
 
 ;; company-mode
 (use-package company
-  :commands company-mode)
+  :defer 5
+  :commands company-mode
+  :config (global-company-mode 1))
 
 ;; yasnippet
 (use-package yasnippet
   :defer 5
-  :config (yas-global-mode))
+  :config (yas-global-mode 1))
 
 
 ;; cc-mode
@@ -96,7 +98,7 @@
   :bind (("<f9> g" . gnus)
          ("C-x m" . compose-mail))
   :init
-  (setq gnus-init-file (expand-file-name "dot-gnus" user-emacs-directory)
+  (setq gnus-init-file (expand-file-name "dot-gnus" user-emacs-directory))
 
   :config (use-package w3m))
 
@@ -116,8 +118,7 @@
 
 ;;; initsplit
 (use-package cus-edit
-  :defer 5
-  :init
+  :config
   (use-package initsplit))
 
 
@@ -141,6 +142,13 @@
   :defer 5
   :config (progn
             (projectile-global-mode 1)))
+
+;;; solarized
+(use-package solarized
+  :load-path "themes/solarized"
+  :config
+  (load-theme 'solarized-dark))
+
 
 ;;; End of the configuration process.
 (when window-system
