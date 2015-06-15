@@ -18,7 +18,7 @@
    (quote
     (gnus-agent-mode)))
  '(gnus-inhibit-startup-message t)
- '(gnus-init-file "~/.emacs.d/settings/dot-gnus.el")
+ '(gnus-init-file "~/.emacs.d/settings/dot-gnus.el" t)
  '(gnus-message-archive-group
    (quote
     (("polimi" "nnimap+polimi:Sent Items")

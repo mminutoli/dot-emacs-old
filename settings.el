@@ -31,7 +31,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(cursor-color nil)
- '(cursor-type t)
+ '(cursor-type t t)
  '(custom-enabled-themes
    (quote
     (solarized-dark)))

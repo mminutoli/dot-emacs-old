@@ -21,7 +21,7 @@
       nil))))
  '(org-agenda-files
    (quote
-    ("/home/marco/org/blog-ideas.org" "/home/marco/org/personal.org" "/home/marco/org/refile.org" "/home/marco/org/polimi/hls-fpointers.org" "/home/marco/org/polimi/hls-pthread.org" "/home/marco/org/polimi/panda-admin.org" "/home/marco/org/polimi/panda.org" "/home/marco/org/polimi/papers.org")))
+    ("~/org/" "~/org/pnnl/" "~/org/polimi/")))
  '(org-agenda-sorting-strategy
    (quote
     ((agenda habit-down time-up effort-up category-keep)

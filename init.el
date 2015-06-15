@@ -16,7 +16,7 @@
 (mapc
  #'(lambda (path)
      (push (expand-file-name path user-emacs-directory) load-path))
- '("site-lisp" "lisp" "lisp/use-package"))
+ '("site-lisp" "lisp" "lisp/use-package" ""))
 
 (load (expand-file-name "settings" user-emacs-directory))
 
@@ -147,14 +147,10 @@
 
 ;;; org-mode
 (use-package dot-org
-  :init
-  (progn
-    (use-package org
-      :mode ("\\.org" . org-mode))
-    (use-package org-agenda
-      :bind ("<f12>" . org-agenda))
-    (use-package org-capture
-      :bind ("C-c c" . org-capture))))
+  :defer 5
+  :mode ("\\.org" . org-mode)
+  :bind (("<f12>" . org-agenda)
+         ("C-c c" . org-capture)))
 
 ;;; projectile
 (use-package projectile
