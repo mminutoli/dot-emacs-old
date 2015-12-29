@@ -21,7 +21,7 @@
       nil))))
  '(org-agenda-files
    (quote
-    ("~/org/" "~/org/pnnl/" "~/org/polimi/")))
+    ("~/org/")))
  '(org-agenda-sorting-strategy
    (quote
     ((agenda habit-down time-up effort-up category-keep)
