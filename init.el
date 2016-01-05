@@ -16,7 +16,7 @@
 (mapc
  #'(lambda (path)
      (push (expand-file-name path user-emacs-directory) load-path))
- '("site-lisp" "lisp" "lisp/use-package" ""))
+ '("site-lisp" "lisp" "lisp/use-package"))
 
 (load (expand-file-name "settings" user-emacs-directory))
 
@@ -63,6 +63,7 @@
 
 ;; bbdb
 (use-package bbdb-loaddefs
+  :load-path "site-lisp/bbdb/lisp"
   :config
   (progn
     (bbdb-initialize 'gnus 'message 'pgp)
@@ -111,6 +112,7 @@
 
 ;;; gnus
 (use-package dot-gnus
+  :load-path "site-lisp/dot-files"
   :bind (("<f9> g" . gnus)
          ("C-x m" . compose-mail))
   :init
@@ -147,6 +149,7 @@
 
 ;;; org-mode
 (use-package dot-org
+  :load-path "site-lisp/dot-files"
   :defer 5
   :mode ("\\.org" . org-mode)
   :bind (("<f12>" . org-agenda)
@@ -163,7 +166,12 @@
 (use-package solarized
   :load-path "themes/solarized"
   :config
-  (load-theme 'solarized-dark))
+  (if (daemonp)
+      (add-hook 'after-make-frame-functions
+                (lambda (frame)
+                  (select-frame frame)
+                  (load-theme 'solarized-dark t)))
+    (load-theme 'solarized-dark t)))
 
 
 ;;; End of the configuration process.
